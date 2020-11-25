@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Inicio Agenda" />
+    <item
+        android:id="@+id/listaAgendaFragment"
+        android:title="Listar todos los contactos" />
+    <item android:title="Métodos a usar">
+        <menu>
+            <item
+                android:id="@+id/insertarFragment"
+                android:title="Insertar una persona" />
+            <item
+                android:id="@+id/borrarFragment"
+                android:title="Borrar una persona" />
+            <item
+                android:id="@+id/editarFragment"
+                android:title="Editar una persona" />
+        </menu>
+    </item>
+
+</menu>

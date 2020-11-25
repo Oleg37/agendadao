@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="es.miapp.ad.agendasimple.view.HomeFragment"
+        android:label="Inicio Agenda"
+        tools:layout="@layout/fg_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_insertarFragment"
+            app:destination="@id/insertarFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_listaAgendaFragment"
+            app:destination="@id/listaAgendaFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_borrarPersona"
+            app:destination="@id/borrarFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/insertarFragment"
+        android:name="es.miapp.ad.agendasimple.view.InsertarFragment"
+        android:label="Insertar persona"
+        tools:layout="@layout/fg_insertar" >
+        <action
+            android:id="@+id/action_insertarFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/listaAgendaFragment"
+        android:name="es.miapp.ad.agendasimple.view.ListaAgendaFragment"
+        android:label="Lista de contactos"
+        tools:layout="@layout/fg_lista_agenda" >
+        <action
+            android:id="@+id/action_listaAgendaFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/borrarFragment"
+        android:name="es.miapp.ad.agendasimple.view.BorrarPersona"
+        android:label="fg_borrar"
+        tools:layout="Borrar una persona" >
+        <action
+            android:id="@+id/action_borrarPersona_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+    </fragment>
+</navigation>
